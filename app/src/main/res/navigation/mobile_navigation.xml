@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.chethanbhandarkar.imbd.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_moviedetails"
+            app:destination="@id/moviedetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -18,8 +22,15 @@
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.chethanbhandarkar.imbd.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/moviedetailsFragment"
+        android:name="com.chethanbhandarkar.imbd.ui.moviedetails.MovieDetailsFragment"
+        android:label="@string/title_moviedetails"
+        tools:layout="@layout/fragment_moviedetails" >
+        <action
+            android:id="@+id/action_navigation_moviedetails_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <argument
+            android:name="movieClick"
+            app:argType="com.chethanbhandarkar.imbd.data.repository.MoviesDataList$MoviesHomeData" />
+    </fragment>
 </navigation>

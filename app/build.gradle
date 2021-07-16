@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId "com.chethanbhandarkar.imbd"
-        minSdkVersion 21
+        minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -57,7 +57,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
-    implementation 'androidx.fragment:fragment-ktx:1.3.5'
+    implementation 'androidx.fragment:fragment-ktx:1.3.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     def version_lifecycle = "2.3.1"
     def version_coroutine = "1.5.0"

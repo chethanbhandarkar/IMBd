@@ -1,12 +1,38 @@
 package com.chethanbhandarkar.imbd.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
+import androidx.paging.cachedIn
+import com.chethanbhandarkar.imbd.data.repository.MovieRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
-	private val _text = MutableLiveData<String>().apply {
-		value = "This is home Fragment"
+@HiltViewModel
+class HomeViewModel @Inject constructor(private val repository: MovieRepository): ViewModel() {
+	private val currentQuery = MutableLiveData(DEFAULT_QUERY)
+	//private val currentQuery = state.getLiveData(CURRENT_QUERY, DEFAULT_QUERY)
+	val movies = currentQuery.switchMap { queryString ->
+		repository.getSearchResults(queryString).cachedIn(viewModelScope)
 	}
-	val text: LiveData<String> = _text
+
+
+
+
+
+	 fun getTopHeadlines(query: String?) {
+		currentQuery.value = query
+
+	}
+
+
+
+
+
+
+
+
+	companion object {
+		private val DEFAULT_QUERY: String? = null
+		private val CURRENT_QUERY: String = "current_query"
+
+	}
 }

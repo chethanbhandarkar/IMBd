@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.moviedetails.MovieDetailsFragment">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/framelayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/tv_detailstitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_detailsimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:contentDescription="di"
+                    android:scaleType="fitXY"
+                    tools:src="@tools:sample/backgrounds/scenic" />
+
+                <Button
+                    android:id="@+id/btn_moredetails"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="76dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom|right"
+
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="Read More"
+                    android:textColor="#FFFFFF"
+                    android:textSize="7sp">
+
+                </Button>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tv_detailstitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="At least 19 missing as mudslide west of Tokyo hits houses"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_author"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/framelayout" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:paddingLeft="15dp"
+                android:text="Author: Chethan"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_detailsdescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_detailstitle" />
+
+            <TextView
+                android:id="@+id/tv_detailsdescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="TOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officials said"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@id/tv_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_author" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:lineSpacingExtra="3sp"
+                android:padding="15dp"
+                android:text="TOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officTOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officials saidials said"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/tv_detailsdescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
