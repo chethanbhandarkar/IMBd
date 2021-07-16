@@ -7,8 +7,12 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class MoviesDataList(
 
+
+	@SerializedName("Response")
+	var response: String,
+
 	@SerializedName("Search")
-	var search: List<MoviesHomeData>
+	var search: List<MoviesHomeData>?
 
 ):Parcelable{
 

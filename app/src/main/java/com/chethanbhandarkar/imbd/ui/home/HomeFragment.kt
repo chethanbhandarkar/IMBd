@@ -46,6 +46,7 @@ class HomeFragment : Fragment(),MoviesPagingAdapter.OnItemClickListenr {
 		setHasOptionsMenu(true)
 
 		val adapter=MoviesPagingAdapter(this)
+		homeViewModel.getTopHeadlines(null)
 
 		binding.apply {
 
