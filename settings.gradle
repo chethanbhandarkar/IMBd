@@ -1,0 +1,2 @@
+rootProject.name = "IMBd"
+include ':app'
