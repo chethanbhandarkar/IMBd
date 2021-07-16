@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/black_bg"
     tools:context=".ui.home.HomeFragment">
 
 
@@ -22,6 +23,7 @@
         android:id="@+id/tv_topheadlines"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
         android:fontFamily="@font/lato_bold"
         android:gravity="center|left"
         android:paddingLeft="10dp"
@@ -54,23 +56,23 @@
         android:layout_height="200dp"
 
         android:visibility="gone"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         app:lottie_rawRes="@raw/nosearchresults" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/searching_lottie"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:visibility="gone"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/searchinglottie" />

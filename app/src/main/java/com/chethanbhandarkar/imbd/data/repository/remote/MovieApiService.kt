@@ -25,7 +25,7 @@ interface MovieApiService {
 	suspend fun getMovieDetails(
 
 		@Query("apiKey") apiKey: String = OMDB_ID,
-		@Query("i") imdbtitle: String?,
+		@Query("i") imdbtitle: String,
 	): MoviesDetailsData
 
 }

@@ -8,7 +8,7 @@ interface MovieRepositoryInterface {
 
 
 	fun getSearchResults(query: String?): LiveData<PagingData<MoviesDataList.MoviesHomeData>>
-	suspend fun getMovieDetails(imdbId:String?):LiveData<MoviesDetailsData>
+	suspend fun getMovieDetails(imdbId:String):MoviesDetailsData
 
 
 }

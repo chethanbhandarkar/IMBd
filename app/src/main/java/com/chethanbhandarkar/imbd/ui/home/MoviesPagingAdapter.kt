@@ -52,6 +52,7 @@ class MoviesPagingAdapter(private val listener:OnItemClickListenr) :
 		fun bind(movies:MoviesDataList.MoviesHomeData) {
 			binding.apply {
 				tvTitle.text =movies.Title
+				tvYear.text=movies.Year
 
 				Glide.with(itemView)
 					.load(movies.Poster)

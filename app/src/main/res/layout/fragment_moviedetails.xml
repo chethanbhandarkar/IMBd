@@ -5,6 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1E2132"
     tools:context=".ui.moviedetails.MovieDetailsFragment">
 
 
@@ -15,7 +16,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,6 +38,12 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/black_bg" />
 
                 <ImageView
                     android:id="@+id/iv_detailsimage"
@@ -72,38 +79,41 @@
                 android:lineSpacingExtra="3sp"
                 android:padding="15dp"
                 android:text="At least 19 missing as mudslide west of Tokyo hits houses"
+                android:textColor="#FFEFEF"
                 android:textSize="22sp"
-                app:layout_constraintBottom_toTopOf="@+id/tv_author"
+                app:layout_constraintBottom_toTopOf="@+id/tv_ratings"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/framelayout" />
 
             <TextView
-                android:id="@+id/tv_author"
+                android:id="@+id/tv_ratings"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato_bold"
                 android:paddingLeft="15dp"
-                android:text="Author: Chethan"
+                android:text="- / -"
+                android:textColor="#FFEFEF"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@id/tv_detailsdescription"
+                app:layout_constraintBottom_toTopOf="@id/tv_plot"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_detailstitle" />
 
             <TextView
-                android:id="@+id/tv_detailsdescription"
+                android:id="@+id/tv_plot"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato_bold"
                 android:lineSpacingExtra="3sp"
                 android:padding="15dp"
-                android:text="TOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officials said"
-                android:textSize="20sp"
+                android:text="The people of a small village in Victorian India stake their future on a game of cricket against their ruthless British rulers"
+                android:textColor="#FFEFEF"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@id/tv_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_author" />
+                app:layout_constraintTop_toBottomOf="@id/tv_ratings" />
 
             <TextView
                 android:id="@+id/tv_content"
@@ -112,12 +122,13 @@
                 android:fontFamily="@font/lato_bold"
                 android:lineSpacingExtra="3sp"
                 android:padding="15dp"
-                android:text="TOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officTOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officials saidials said"
-                android:textSize="20sp"
+                android:text="TOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officTOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officials saidTOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Saturday, leaving at least 19 people missing, officTOKYO (AP) — A powerful mudslide carrying a deluge of black water and debris crashed into rows of houses in a town west of Tokyo following heavy rains on Ssaidials saidials said"
+                android:textColor="#FFEFEF"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
 
-                app:layout_constraintTop_toBottomOf="@id/tv_detailsdescription" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_plot" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

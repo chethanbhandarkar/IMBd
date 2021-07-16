@@ -36,14 +36,18 @@
                 android:background="@drawable/black_bg" />
 
             <TextView
-                android:id="@+id/tv_imdbtitle"
+                android:id="@+id/tv_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/lato_bold"
-                android:gravity="center|left"
-                android:text="33 min ago"
-                android:textSize="14sp" />
+                android:gravity="bottom|center|left"
+                android:text="2001"
+                android:textColor="#E5DD75"
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/tv_title"
@@ -51,12 +55,12 @@
                 android:layout_height="wrap_content"
 
                 android:layout_gravity="bottom|center|left"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="30dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/lato_bold"
                 android:gravity="bottom"
                 android:maxLines="2"
-                android:padding="5dp"
                 android:text=" Harry Potter and the Cursed Child"
                 android:textColor="#FFF3F3"
                 android:textSize="12sp" />
