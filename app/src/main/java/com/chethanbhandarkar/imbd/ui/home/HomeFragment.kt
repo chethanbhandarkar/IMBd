@@ -53,7 +53,7 @@ class HomeFragment : Fragment(),MoviesPagingAdapter.OnItemClickListenr {
 
 
 			rvMovielist.setHasFixedSize(true)
-			rvMovielist.layoutManager=GridLayoutManager(activity,2)
+			rvMovielist.layoutManager=GridLayoutManager(activity,3)
 			rvMovielist.adapter=adapter.withLoadStateHeaderAndFooter(
 
 				header = LoadingStateAdapter{

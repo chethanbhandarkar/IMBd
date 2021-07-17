@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/black_bg"
     tools:context=".ui.home.HomeFragment">
 
 
@@ -24,12 +23,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        android:fontFamily="@font/lato_bold"
+        android:fontFamily="@font/montserrat"
         android:gravity="center|left"
         android:paddingLeft="10dp"
         android:text="Movies"
         android:textColor="#4354F4"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@id/rv_movielist"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,9 +51,10 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/no_data_lottie"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
 
+        android:layout_marginStart="8dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,9 +66,9 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/searching_lottie"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

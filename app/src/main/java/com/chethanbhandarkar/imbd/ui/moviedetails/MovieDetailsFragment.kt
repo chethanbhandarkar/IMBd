@@ -42,13 +42,26 @@ class MovieDetailsFragment : Fragment() {
 
 		val movieClicked = args.movieClick
 		moviesDetailsViewModel.getMovieDetail(movieClicked.imdbID)
-
 		moviesDetailsViewModel.currentMovie.observe(viewLifecycleOwner, {movieDetails->
 
 			binding.apply {
 
-				tvAuthor.text=movieDetails.imdbrating
+				tvRatings.text=movieDetails.imdbrating
 				tvPlot.text=movieDetails.plot
+				tvGenre.text=movieDetails.genre
+
+				tvLanguage.text=movieDetails.language
+				tvYear2.text=movieDetails.year
+				tvRatings2.text=movieDetails.metascore
+				tvStars.text=movieDetails.actors
+				tvWriter.text=movieDetails.writer
+				tvDirector.text=movieDetails.director
+				tvBoxoffice.text=movieDetails.boxoffice
+				Glide.with(this@MovieDetailsFragment)
+					.load(movieClicked.Poster)
+					.centerCrop()
+					.transition(DrawableTransitionOptions.withCrossFade())
+					.error(R.drawable.black_bg).into(ivDetailsSmallPoster)
 
 
 			}
@@ -60,15 +73,12 @@ class MovieDetailsFragment : Fragment() {
 
 
 		binding.apply {
-
 			tvDetailstitle.text = movieClicked.Title
-
-
 			Glide.with(this@MovieDetailsFragment)
 				.load(movieClicked.Poster)
 				.centerCrop()
 				.transition(DrawableTransitionOptions.withCrossFade())
-				.error(R.drawable.ic_launcher_background)
+				.error(R.drawable.black_bg)
 				.listener(object : RequestListener<Drawable> {
 					override fun onLoadFailed(
 						e: GlideException?,

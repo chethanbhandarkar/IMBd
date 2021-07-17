@@ -16,7 +16,7 @@ android {
 
     defaultConfig {
         applicationId "com.chethanbhandarkar.imbd"
-        minSdkVersion 26
+        minSdkVersion 27
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"

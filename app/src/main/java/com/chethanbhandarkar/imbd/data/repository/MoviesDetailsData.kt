@@ -7,6 +7,11 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class MoviesDetailsData(
 
+
+	//imdbVotes
+	//imdbratings
+	//genre
+	//year
 		@SerializedName("Response")
 		var response: String,
 
