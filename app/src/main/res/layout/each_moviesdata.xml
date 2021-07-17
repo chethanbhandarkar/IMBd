@@ -57,7 +57,7 @@
 
                 android:layout_gravity="bottom|center|left"
                 android:layout_marginLeft="10dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="20dp"
                 android:ellipsize="end"
                 android:fontFamily="@font/lato_bold"
                 android:gravity="bottom"

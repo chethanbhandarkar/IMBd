@@ -19,9 +19,12 @@ class MovieDetailsViewModel @Inject constructor(private val repository: MovieRep
 		get()=_currentMovie
 
 
+
 	fun getMovieDetail(imdbTitle:String) {
-		viewModelScope.launch {
-			_currentMovie.value=repository.getMovieDetails(imdbId = imdbTitle)
+
+			viewModelScope.launch {
+				_currentMovie.value = repository.getMovieDetails(imdbId = imdbTitle)
+
 		}
 	}
 

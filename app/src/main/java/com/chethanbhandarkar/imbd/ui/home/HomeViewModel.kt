@@ -10,41 +10,22 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val repository: MovieRepository): ViewModel() {
+class HomeViewModel @Inject constructor(private val repository: MovieRepository) : ViewModel() {
 	private val currentQuery = MutableLiveData(DEFAULT_QUERY)
 
-
-
-	//private val currentQuery = state.getLiveData(CURRENT_QUERY, DEFAULT_QUERY)
 	val movies = currentQuery.switchMap { queryString ->
 		repository.getSearchResults(queryString).cachedIn(viewModelScope)
 	}
 
-
-
-
-
-	 fun getTopHeadlines(query: String?) {
+	fun getTopHeadlines(query: String?) {
 		currentQuery.value = query
 
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
 	companion object {
 		private val DEFAULT_QUERY: String? = null
-		private val DEFAULT_MOVIE: String? = null
-		private val CURRENT_QUERY: String = "current_query"
+		//private val DEFAULT_MOVIE: String? = null
+	//	private val CURRENT_QUERY: String = "current_query"
 
 	}
 }

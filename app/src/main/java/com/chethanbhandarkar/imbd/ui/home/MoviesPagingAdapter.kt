@@ -9,12 +9,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-
 import com.chethanbhandarkar.imbd.R
 import com.chethanbhandarkar.imbd.data.repository.MoviesDataList
 import com.chethanbhandarkar.imbd.databinding.EachMoviesdataBinding
 
-class MoviesPagingAdapter(private val listener:OnItemClickListenr) :
+class MoviesPagingAdapter(private val listener: OnItemClickListenr) :
 	PagingDataAdapter<MoviesDataList.MoviesHomeData, MoviesPagingAdapter.NewsViewHolder>(NEWS_COMPARATOR) {
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
 		val binding =
@@ -49,10 +48,10 @@ class MoviesPagingAdapter(private val listener:OnItemClickListenr) :
 		}
 
 		@RequiresApi(Build.VERSION_CODES.O)
-		fun bind(movies:MoviesDataList.MoviesHomeData) {
+		fun bind(movies: MoviesDataList.MoviesHomeData) {
 			binding.apply {
-				tvTitle.text =movies.Title
-				tvYear.text=movies.Year
+				tvTitle.text = movies.Title
+				tvYear.text = movies.Year
 
 				Glide.with(itemView)
 					.load(movies.Poster)
@@ -65,9 +64,8 @@ class MoviesPagingAdapter(private val listener:OnItemClickListenr) :
 		}
 	}
 
-	interface OnItemClickListenr{
-
-		fun onItemClick(movies:MoviesDataList.MoviesHomeData)
+	interface OnItemClickListenr {
+		fun onItemClick(movies: MoviesDataList.MoviesHomeData)
 	}
 
 	companion object {
@@ -79,7 +77,7 @@ class MoviesPagingAdapter(private val listener:OnItemClickListenr) :
 
 			override fun areContentsTheSame(
 				oldItem: MoviesDataList.MoviesHomeData,
-				newItem:MoviesDataList.MoviesHomeData
+				newItem: MoviesDataList.MoviesHomeData
 			) = oldItem == newItem
 
 		}

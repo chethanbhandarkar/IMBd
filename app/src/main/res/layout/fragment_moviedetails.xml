@@ -43,7 +43,7 @@
                 <ImageView
                     android:id="@+id/iv_detailsimage"
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
+                    android:layout_height="430dp"
                     android:contentDescription="di"
                     android:scaleType="fitXY"
                     tools:src="@tools:sample/backgrounds/scenic" />
@@ -72,7 +72,7 @@
 
                         <ImageView
                             android:id="@+id/iv_details_small_poster"
-                            android:layout_width="120dp"
+                            android:layout_width="match_parent"
                             android:layout_height="180dp"
                             android:layout_gravity="bottom|left"
                             android:elevation="6dp"
@@ -93,7 +93,7 @@
                         <TextView
                             android:id="@+id/tv_detailstitle"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="bottom|right"
                             android:fontFamily="@font/montserrat"
                             android:lineSpacingExtra="3sp"
@@ -187,7 +187,7 @@
                     <TextView
                         android:id="@+id/tv_ratings"
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="bottom|center"
                         android:fontFamily="@font/montserrat"
                         android:text="- / -"
