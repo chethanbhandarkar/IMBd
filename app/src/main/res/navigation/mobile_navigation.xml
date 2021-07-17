@@ -17,15 +17,15 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.chethanbhandarkar.imbd.ui.dashboard.DashboardFragment"
+        android:name="com.chethanbhandarkar.imbd.ui.wishlist.WishlistFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/moviedetailsFragment"
         android:name="com.chethanbhandarkar.imbd.ui.moviedetails.MovieDetailsFragment"
-        android:label="@string/title_moviedetails"
-        tools:layout="@layout/fragment_moviedetails" >
+        android:label="@string/title_recent"
+        tools:layout="@layout/fragment_moviedetails">
         <action
             android:id="@+id/action_navigation_moviedetails_to_navigation_home"
             app:destination="@id/navigation_home" />
@@ -33,4 +33,9 @@
             android:name="movieClick"
             app:argType="com.chethanbhandarkar.imbd.data.repository.MoviesDataList$MoviesHomeData" />
     </fragment>
+    <fragment
+        android:id="@+id/recentFragment"
+        android:name="com.chethanbhandarkar.imbd.ui.recent.RecentFragment"
+        android:label="recent_fragment"
+        tools:layout="@layout/recent_fragment" />
 </navigation>

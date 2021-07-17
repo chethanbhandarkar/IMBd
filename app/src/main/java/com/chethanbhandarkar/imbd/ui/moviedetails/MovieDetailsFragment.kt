@@ -40,7 +40,7 @@ class MovieDetailsFragment : Fragment() {
 
 
 
-		val movieClicked = args.movieClick
+		val movieClicked= args.movieClick
 		moviesDetailsViewModel.getMovieDetail(movieClicked.imdbID)
 		moviesDetailsViewModel.currentMovie.observe(viewLifecycleOwner, {movieDetails->
 
