@@ -17,6 +17,10 @@ API has two endpoints to search by keyword or search by title/id.
 
 Get your Auth Key for free and replace the key in gradle.properties
 
+# Downloadable link
+
+https://drive.google.com/file/d/1yU0XfBBxOZOEhURXLx0BhWt4XJ-gatiA/view?usp=sharing
+
 # Requirements :
 
 OS : Android
