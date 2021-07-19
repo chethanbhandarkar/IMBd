@@ -24,7 +24,6 @@ data class MoviesDataList(
 		@SerializedName("Poster")
 		var Poster: String,
 		) : Parcelable
-
 }
 
 

@@ -36,35 +36,26 @@ class MovieDetailsFragment : Fragment() {
 		super.onViewCreated(view, savedInstanceState)
 		val binding = FragmentMoviedetailsBinding.bind(view)
 		val movieClicked = args.movieClick
-		//Log.d("checks",movieClicked.imdbID)
-
 		moviesDetailsViewModel.getMovieDetail(movieClicked.imdbID)
-
-
 		moviesDetailsViewModel.currentMovie.observe(viewLifecycleOwner, { movieDetails ->
 
-
-
-
-			Log.d("checks",movieDetails.imdbrating)
-				binding.apply {
-					tvRatings.text = movieDetails.imdbrating
-					tvPlot.text = movieDetails.plot
-					tvGenre.text = movieDetails.genre
-					tvLanguage.text = movieDetails.language
-					tvYear2.text = movieDetails.year.substring(0, 4)
-					tvRatings2.text = movieDetails.metascore
-					tvStars.text = movieDetails.actors
-					tvWriter.text = movieDetails.writer
-					tvDirector.text = movieDetails.director
-					tvBoxoffice.text = movieDetails.boxoffice
-					Glide.with(this@MovieDetailsFragment)
-						.load(movieClicked.Poster)
-						.centerCrop()
-						.transition(DrawableTransitionOptions.withCrossFade())
-						.error(R.drawable.black_bg).into(ivDetailsSmallPoster)
-				}
-
+			binding.apply {
+				tvRatings.text = movieDetails.imdbrating
+				tvPlot.text = movieDetails.plot
+				tvGenre.text = movieDetails.genre
+				tvLanguage.text = movieDetails.language
+				tvYear2.text = movieDetails.year.substring(0, 4)
+				tvRatings2.text = movieDetails.metascore
+				tvStars.text = movieDetails.actors
+				tvWriter.text = movieDetails.writer
+				tvDirector.text = movieDetails.director
+				tvBoxoffice.text = movieDetails.boxoffice
+				Glide.with(this@MovieDetailsFragment)
+					.load(movieClicked.Poster)
+					.centerCrop()
+					.transition(DrawableTransitionOptions.withCrossFade())
+					.error(R.drawable.black_bg).into(ivDetailsSmallPoster)
+			}
 		})
 
 
@@ -85,6 +76,7 @@ class MovieDetailsFragment : Fragment() {
 						progressBar.isVisible = false
 						return false
 					}
+
 					override fun onResourceReady(
 						resource: Drawable?,
 						model: Any?,
