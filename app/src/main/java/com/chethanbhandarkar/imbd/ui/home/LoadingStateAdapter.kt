@@ -1,4 +1,4 @@
-package com.chethanbhandarkar.gnews.ui.topheadlines
+package com.chethanbhandarkar.imbd.ui.topheadlines
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,12 +6,9 @@ import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.recyclerview.widget.RecyclerView
-
-import com.chethanbhandarkar.gnews.ui.topheadlines.LoadingStateAdapter.LoadingViewHolder
 import com.chethanbhandarkar.imbd.databinding.ErrorStateBinding
 
-class LoadingStateAdapter
-constructor(private val retry: () -> Unit) : LoadStateAdapter<LoadingViewHolder>() {
+class LoadingStateAdapter constructor(private val retry: () -> Unit) : LoadStateAdapter<LoadingStateAdapter.LoadingViewHolder>() {
 	inner class LoadingViewHolder(private val binding: ErrorStateBinding, retry: () -> Unit) :
 		RecyclerView.ViewHolder(binding.root) {
 		init {

@@ -27,5 +27,4 @@ interface MovieApiService {
 		@Query("apiKey") apiKey: String = OMDB_ID,
 		@Query("i") imdbtitle: String,
 	): MoviesDetailsData
-
 }

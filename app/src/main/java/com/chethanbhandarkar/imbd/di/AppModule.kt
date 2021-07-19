@@ -25,4 +25,5 @@ object AppModule {
 	@Singleton
 	fun provideMovieApiService(retrofit: Retrofit): MovieApiService =
 		retrofit.create(MovieApiService::class.java)
+
 }

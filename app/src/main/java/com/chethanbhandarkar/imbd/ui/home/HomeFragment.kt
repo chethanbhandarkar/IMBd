@@ -9,19 +9,16 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.chethanbhandarkar.gnews.ui.topheadlines.LoadingStateAdapter
 import com.chethanbhandarkar.imbd.R
 import com.chethanbhandarkar.imbd.data.repository.MoviesDataList
 import com.chethanbhandarkar.imbd.databinding.FragmentHomeBinding
+import com.chethanbhandarkar.imbd.ui.topheadlines.LoadingStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class HomeFragment : Fragment(), MoviesPagingAdapter.OnItemClickListenr {
 	private var _binding: FragmentHomeBinding? = null
 	private val homeViewModel by viewModels<HomeViewModel>()
-
-	// This property is only valid between onCreateView and
-	// onDestroyView.
 	private val binding get() = _binding!!
 	private var searching: Boolean = false
 

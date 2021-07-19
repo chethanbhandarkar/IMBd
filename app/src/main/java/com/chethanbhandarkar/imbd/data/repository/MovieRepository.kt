@@ -1,8 +1,6 @@
 package com.chethanbhandarkar.imbd.data.repository
 
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.liveData
@@ -28,8 +26,7 @@ class MovieRepository @Inject constructor(private val movieApiService: MovieApiS
 		).liveData
 
 	override suspend fun getMovieDetails(imdbId: String): MoviesDetailsData {
-
-   return movieApiService.getMovieDetails(imdbtitle = imdbId)
+   	return movieApiService.getMovieDetails(imdbtitle = imdbId)
 
 	}
 
