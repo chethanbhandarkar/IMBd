@@ -29,7 +29,7 @@ class WishlistFragment : Fragment() {
 
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
-		binding.textDashboard.text="Coming Soon"
+		binding.tvWlComingsoon.text="Coming Soon"
 	}
 
 	override fun onDestroyView() {
