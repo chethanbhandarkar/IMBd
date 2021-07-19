@@ -28,7 +28,7 @@ class WishlistFragment : Fragment() {
 	override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 		super.onViewCreated(view, savedInstanceState)
 
-		binding.textDashboard.text=getString(R.string.string_coming_soon)
+		binding.tvWlComingsoon.text=getString(R.string.string_coming_soon)
 
 	}
 
