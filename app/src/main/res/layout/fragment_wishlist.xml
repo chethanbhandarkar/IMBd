@@ -33,6 +33,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+<<<<<<< HEAD
 
 
+=======
+    <<<<<<< Updated upstream
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wl_comingsoon"
+        app:layout_constraintVertical_bias="0.199" />
+=======
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_wl_comingsoon" />
+>>>>>>> Stashed changes
+>>>>>>> fd4b30d8a57c0b44ced58b66fd9804ab754ca9c2
 </androidx.constraintlayout.widget.ConstraintLayout>
