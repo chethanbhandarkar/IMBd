@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
-	@Provides
+	@Provides //Added feature by other people
 	@Singleton
 	fun provideRetrofit(): Retrofit =
 		Retrofit.Builder()
