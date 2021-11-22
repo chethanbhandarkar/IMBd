@@ -27,4 +27,3 @@ object AppModule {
 		retrofit.create(MovieApiService::class.java)
 
 }
-//MODIFIED FEATURE ON f1
