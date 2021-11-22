@@ -26,14 +26,7 @@ https://drive.google.com/file/d/1yU0XfBBxOZOEhURXLx0BhWt4XJ-gatiA/view?usp=shari
 OS : Android
 
 Minimum API : 26
-
-## If you want to run
-	       
-- Go to NewsAPI and generate an API key (It's only 2 steps!) https://newsapi.org/
-- Put the API key at the bottom of the gradle.properties news_org_access_key = "YOUR_API_KEY"
-- Run the app
-
-											     
+								     
 ## App Architecture MVVM
 											     
 <img src="https://static.packt-cdn.com/products/9781788995511/graphics/0c998f26-d448-48a5-9d84-d629d4f77ba6.png"/> 
